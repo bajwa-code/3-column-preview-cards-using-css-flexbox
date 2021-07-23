@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+:root {
+
+    /*Primay colors*/
+    --primary-orange: hsl(31, 77%, 52%);
+    --primary-cyan:  hsl(184, 100%, 22%);
+    --primary-dark-cyan: hsl(179, 100%, 13%);
+
+    /*Neutral colors*/
+    --neutral-white: hsla(0, 0%, 100%, 0.75);
+    --neutral-lightgray: hsl(0, 0%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--neutral-lightgray);
+}
+
+.container {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    padding: 49px 42px;
+}
+
+.card:nth-child(1) {
+  background: var(--primary-orange);
+  border-radius: 10px 10px 0 0;
+}
+
+.card:nth-child(2) {
+    background: var(--primary-cyan);
+}
+
+.card:nth-child(3) {
+    background: var(--primary-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.card-header {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--neutral-lightgray);
+}
+
+.card-header h1 {
+    margin: 25px 0;
+}
+
+.card-body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: var(--neutral-white);
+}
+
+.btn {
+    display: inline-block;
+    /*position: relative;*/
+    text-decoration: none;
+    background: var(--neutral-lightgray);
+    padding: 10px 25px;
+    margin-top: 70px;
+    border-radius: 50px;
+    border: 2px solid var(--neutral-lightgray);
+}
+
+.card:nth-child(1) .btn{
+    color: var(--primary-orange);
+}
+
+.card:nth-child(2) .btn{
+    color: var(--primary-cyan);
+}
+
+.card:nth-child(3) .btn{
+    color: var(--primary-dark-cyan);
+}
+
+.card:nth-child(n) .btn:hover {
+    background: transparent;
+    border: 2px solid var(--neutral-lightgray);
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+
+
+@media screen and (min-width: 700px) {
+
+    .row {
+        flex-direction: row;
+    }
+
+    .card:nth-child(1) {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card:nth-child(2) {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .card:nth-child(3) {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .row {
+        flex-direction: row;
+    }
+
+    .card:nth-child(2) {
+        border-radius: 0;
+    }
+
+    .card:nth-child(3) {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    margin-top: 2em; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
